@@ -192,6 +192,9 @@ class PlutoColumn {
   /// Hide the column.
   bool hide;
 
+  ///Set custom widget
+  Widget? columnFilterWidget;
+
   PlutoColumn({
     required this.title,
     required this.field,
@@ -225,6 +228,7 @@ class PlutoColumn {
     this.enableSetColumnsMenuItem = true,
     this.enableAutoEditing = false,
     this.enableEditingMode = true,
+    this.columnFilterWidget,
     this.hide = false,
   })  : _key = UniqueKey(),
         _checkReadOnly = checkReadOnly;
